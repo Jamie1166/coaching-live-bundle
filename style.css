@@ -1,0 +1,464 @@
+/* 1. Basic Reset/Defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 3. Color Palette Variables */
+:root {
+    --gold: #FFD700;
+    --black: #000000;
+    --white: #FFFFFF;
+    --deep-plum: #6A0DAD; /* A rich, soulful purple */
+    --light-pink: #F8E8F8; /* A softer, feminine touch for backgrounds */
+    --text-dark: #333333;
+    --text-light: #FFFFFF;
+    --text-gray: #555555;
+    --border-light: #dddddd;
+}
+
+/* 2. Body Styling */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Clean and trustworthy sans-serif */
+    color: var(--text-dark);
+    background-color: var(--light-pink); /* Light, feminine background */
+    line-height: 1.6;
+}
+
+/* 4. Basic Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', 'Times New Roman', serif; /* Elegant, soulful serif for headings */
+    color: var(--deep-plum);
+    margin-bottom: 0.75em;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 2.8em; /* Bold and prominent */
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2.2em;
+}
+
+h3 {
+    font-size: 1.8em;
+}
+
+p {
+    font-size: 1em;
+    margin-bottom: 1em;
+    color: var(--text-gray);
+}
+
+a {
+    color: var(--deep-plum);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 5. Container/Layout */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Adjusted padding for container */
+}
+
+/* 6. Header Styling */
+header {
+    background-color: var(--white);
+    padding: 1.5em 0;
+    text-align: center;
+    border-bottom: 3px solid var(--gold); /* Bold gold accent */
+}
+
+header h1 {
+    color: var(--deep-plum);
+    font-size: 2em; /* Slightly smaller than hero headline */
+    margin: 0;
+}
+
+/* 7. Hero Section Styling */
+.hero {
+    background-color: var(--white);
+    padding: 3em 20px; /* Adjusted padding for hero */
+    text-align: center;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.hero h2 { /* Main headline styling */
+    font-size: 2.5em; /* Bold and eye-catching */
+    color: var(--deep-plum);
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.hero p { /* Subheadline styling */
+    font-size: 1.2em;
+    color: var(--text-gray);
+    margin-bottom: 1.5em;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 9. Form Styling - Updated for #optin-form */
+#optin-form {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically by default */
+    align-items: center; /* Center elements horizontally */
+    gap: 10px; /* Space between form elements */
+    margin-top: 25px; /* More space above the form */
+    width: 100%;
+    max-width: 450px; /* Max width for the form itself */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#optin-form input[type="text"],
+#optin-form input[type="email"] {
+    padding: 12px 18px; /* Comfortable padding */
+    border: 1px solid var(--border-light); /* Using palette color */
+    border-radius: 8px; /* Slightly more rounded corners for a softer feel */
+    font-size: 1em;
+    width: 100%; /* Take full width of the form container */
+    box-sizing: border-box; /* Ensures padding doesn't add to width */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--white); /* Ensure background is white */
+    color: var(--text-dark);
+}
+
+#optin-form input[type="text"]::placeholder,
+#optin-form input[type="email"]::placeholder {
+    color: var(--text-gray); /* Lighter placeholder text */
+    opacity: 0.8; /* Ensure it's not too faint */
+}
+
+#optin-form input[type="text"]:focus,
+#optin-form input[type="email"]:focus {
+    border-color: var(--deep-plum); /* Highlight with brand color */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 8px rgba(106, 13, 173, 0.4); /* Softer, plum-colored glow */
+}
+
+/* 8. Button Styling - .cta-button is used by the form button */
+.cta-button {
+    background-color: var(--deep-plum);
+    color: var(--text-light); /* Ensure text is light on dark button */
+    padding: 12px 25px; /* Adjusted padding for better feel */
+    border: none;
+    border-radius: 25px; /* Softer, more feminine rounded corners */
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase; /* Bold statement */
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    width: 100%; /* Make button full width of form */
+    max-width: 300px; /* Max width for the button, consistent with inputs if desired or separate */
+    margin-top: 10px; /* Space above the button when form is stacked */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for button */
+}
+
+#optin-form .cta-button:hover { /* Specific hover for form context if needed, or rely on general */
+    background-color: var(--gold);
+    color: var(--text-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Enhanced shadow on hover */
+}
+
+
+/* 10. Showcase Section Styling */
+.showcase {
+    padding: 3em 20px; /* Adjusted padding */
+    background-color: var(--light-pink); /* Consistent light background */
+    text-align: center;
+}
+
+.showcase h2 { /* Ensure showcase heading is styled if changed from h3 */
+    color: var(--deep-plum);
+    /* font-size: 2em; Re-evaluate if needed, already set globally for h2 */
+}
+
+
+.showcase ul { /* This might be unused now, or could be removed if not styling a ul */
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.showcase li { /* This might be unused now, or could be removed */
+    background-color: var(--white);
+    border: 1px solid var(--border-light);
+    padding: 1.5em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    min-width: 200px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* New styles for showcase items */
+.showcase-items {
+    display: flex;
+    justify-content: space-around; /* Distributes space around items */
+    flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
+    margin-top: 20px;
+    gap: 20px; /* Adds space between items, both horizontally and vertically if wrapping */
+}
+
+.showcase-item {
+    text-align: center; /* Centers the image and paragraph within the item */
+    margin-bottom: 20px; /* Adds some space below each item */
+    flex-basis: calc(33.333% - 20px); /* Adjust basis for 3 items, accounting for gap. (20px * 2/3 for average gap) */
+    min-width: 250px; /* Minimum width before wrapping or shrinking too much */
+    background-color: var(--white); /* Optional: give items a background */
+    padding: 15px; /* Optional: padding inside each item */
+    border-radius: 8px; /* Optional: rounded corners for items */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: subtle shadow for items */
+}
+
+.showcase-item img {
+    max-width: 100%; /* Makes image responsive within its container */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Rounded corners for the image */
+    margin-bottom: 10px; /* Space between image and paragraph */
+    border: 1px solid var(--border-light); /* Optional: light border around image */
+}
+
+.showcase-item p {
+    font-size: 0.95em;
+    color: var(--text-gray);
+}
+
+
+/* 11. Testimonials Section Styling */
+.testimonials {
+    background-color: var(--light-pink); /* Using a light palette color for section background */
+    padding: 40px 0; /* Vertical padding, horizontal handled by container */
+}
+
+.testimonials h2 {
+    color: var(--deep-plum);
+    text-align: center;
+    margin-bottom: 40px; /* More space after heading */
+    font-size: 2em; /* Ensure heading is prominent */
+}
+
+.testimonial-items {
+    display: flex;
+    justify-content: space-around; /* Or space-between if preferred */
+    flex-wrap: wrap;
+    gap: 20px; /* Space between items */
+}
+
+.testimonial-item {
+    background-color: var(--white);
+    padding: 25px; /* Generous padding inside item */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Slightly enhanced shadow for depth */
+    flex-basis: calc(33.333% - 20px); /* For 3 items, accounting for gap. (20px * 2/3 for average gap) */
+    min-width: 280px; /* Minimum width before stacking */
+    margin-bottom: 20px; /* Consistent bottom margin, helps if items wrap unevenly */
+    display: flex; /* Using flex to push author to bottom if needed, though not strictly necessary here */
+    flex-direction: column;
+    justify-content: space-between; /* Pushes author to bottom if item heights vary and flex is used */
+}
+
+.testimonial-item blockquote {
+    margin: 0; /* Reset blockquote default margin */
+    flex-grow: 1; /* Allows blockquote to take available space, pushing author down */
+}
+
+.testimonial-item blockquote p {
+    font-style: italic;
+    color: var(--text-dark);
+    margin-bottom: 15px; /* Space between quote and author */
+    font-size: 1.05em; /* Slightly larger for readability */
+    line-height: 1.5;
+}
+
+.testimonial-item .testimonial-author {
+    font-weight: bold;
+    text-align: right;
+    color: var(--deep-plum);
+    font-size: 0.95em;
+    margin-top: auto; /* Pushes author to the bottom if using flex column on testimonial-item */
+}
+
+/* Remove or comment out old generic .testimonials p if it conflicts */
+/*
+.testimonials p {
+    font-style: italic;
+    color: var(--text-gray);
+    font-size: 1.1em;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+*/
+
+/* 12. Footer Styling */
+footer {
+    background-color: var(--text-dark); /* Using text-dark for a common footer background */
+    color: var(--text-light); /* Default text color for footer */
+    padding: 30px 0; /* Vertical padding, horizontal handled by .container inside */
+    text-align: center;
+}
+
+.social-links { /* Targets the div directly */
+    margin-bottom: 15px;
+}
+
+.social-links a { /* Targets the anchor tags */
+    color: var(--text-light); /* Explicitly set or can inherit from footer */
+    text-decoration: none;
+    margin: 0 10px; /* Space between links */
+    font-size: 1.1em; /* Adjusted as per new instructions */
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--gold); /* Gold hover for emphasis */
+    text-decoration: none; /* Explicitly keep underline off, or set to underline if preferred */
+}
+
+.copyright { /* Targets the paragraph with class="copyright" */
+    font-size: 0.9em;
+    color: #f1f1f1; /* A slightly off-white/light grey for subtlety */
+    margin: 0; /* Remove default paragraph margin */
+}
+
+/* The old 'footer p' rule is now superseded by '.copyright' for the specific copyright line.
+   If there were other p tags in footer not caught by .copyright, they'd be unstyled or inherit.
+   The specific 'footer .social-links' is still fine, but the general 'footer .social-links a' is more specific now.
+*/
+
+/* Add class to body of index.html if you want to use .container for general layout */
+/* e.g., <body class="container"> to wrap the whole page content */
+/* Or apply .container to specific sections */
+
+/* The .container class is applied within each section's first child div in index.html,
+   so the section padding itself should be on the section element */
+
+/* For the current HTML, let's ensure sections have some padding */
+/* This was a general rule, hero, showcase, testimonials, footer have their own padding.
+   This rule might be redundant or could be for other generic sections if any were added.
+   For now, let's keep it but ensure specific section padding is correctly set.
+*/
+section { /* General section padding - review if it conflicts with specific section padding */
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+/* Specific section paddings from earlier steps:
+.hero: padding: 3em 1.5em; (now 3em 20px)
+.showcase: padding: 3em 1.5em; (now 3em 20px)
+.testimonials: padding: 40px 0;
+footer: padding: 30px 0;
+It seems the specific paddings will override this general 'section' rule if section tags are used.
+The '0 20px' on .container is for horizontal padding INSIDE the container.
+The section elements themselves (hero, showcase, testimonials) need vertical padding.
+The hero and showcase have `3em 20px` which includes horizontal padding; this might be
+undesirable if the .container inside also has padding.
+Let's ensure section elements have vertical padding and rely on .container for horizontal.
+*/
+
+/* Re-evaluating section padding based on .container usage */
+.hero, .showcase, .testimonials {
+    padding-top: 3em;
+    padding-bottom: 3em;
+    /* Horizontal padding should be handled by .container within these sections */
+}
+/* Footer already has padding: 30px 0; which is fine. */
+/* Header already has padding: 1.5em 0; which is fine. */
+
+
+/* --- Responsive Styles --- */
+
+/* Typography Adjustments */
+@media (max-width: 768px) {
+    h1 { font-size: 2.2em; } /* Header h1 and potentially other h1s */
+    .hero h2 { font-size: 2em; } /* Hero headline */
+    h2 { font-size: 1.8em; } /* Other h2s like Showcase, Testimonials titles */
+    .hero p { font-size: 1.1em; } /* Hero subheadline */
+
+    /* Adjust section padding for smaller screens */
+    .hero, .showcase, .testimonials {
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+    header { padding: 1em 0; }
+    footer { padding: 20px 0; }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 1.8em; }
+    .hero h2 { font-size: 1.7em; }
+    h2 { font-size: 1.5em; }
+    p, #optin-form input, .testimonial-item blockquote p, .showcase-item p { font-size: 0.95em; } /* Slightly smaller body text */
+    .hero p { font-size: 1em; }
+
+    .cta-button { font-size: 1em; padding: 10px 20px; }
+}
+
+/* Hero Section Form Layout */
+@media (min-width: 768px) {
+    #optin-form {
+        flex-direction: row;
+        align-items: baseline; /* Align items by their text baseline */
+        justify-content: center;
+        gap: 15px; /* Adjust gap for row layout */
+    }
+    #optin-form input[type="text"],
+    #optin-form input[type="email"] {
+        width: auto; /* Allow them to size based on content or flex properties */
+        /* margin-bottom: 0; Already handled by gap */
+        flex-grow: 1; /* Allow inputs to grow */
+        max-width: 250px; /* Max width for inputs in row */
+    }
+    #optin-form .cta-button {
+        width: auto; /* Auto width for button content */
+        margin-top: 0; /* Remove top margin if in a row */
+        flex-shrink: 0; /* Prevent button from shrinking */
+    }
+}
+
+/* Showcase Section Items */
+@media (max-width: 992px) { /* Tablet */
+    .showcase-item {
+        flex-basis: calc(50% - 20px); /* 2 items per row, accounting for gap */
+    }
+}
+@media (max-width: 600px) { /* Mobile */
+    .showcase-item {
+        flex-basis: 100%; /* 1 item per row */
+        min-width: 0; /* Allow to be fully fluid if needed */
+    }
+}
+
+/* Testimonials Section Items */
+@media (max-width: 992px) { /* Tablet - 2 items for testimonials as well */
+    .testimonial-item {
+        flex-basis: calc(50% - 20px); /* 2 items per row */
+    }
+}
+@media (max-width: 768px) { /* Larger Mobile / Small Tablet - stack testimonials */
+    .testimonial-item {
+        flex-basis: 100%; /* 1 item per row */
+        min-width: 0; /* Allow to be fully fluid */
+    }
+}
+
+/* Ensure .container padding is consistent if it was changed above */
+/* .container already has padding: 0 20px; this is fine. */
+
+/* Max-width for images already set with max-width: 100%; height: auto; */
+```
